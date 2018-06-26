@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<!-- Basic need -->
+	<title>Movie Recommender System</title>
+	<meta charset="UTF-8">
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+	<!-- CSS files -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='plugins.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="{{ url_for('static', filename='logo1.png') }}" alt="" width="119" height="58">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<div class="page-single-2">
+	<div class="container">
+		<div class="row">
+			<div class="middle-content">
+				<a href="{{url_for('homepage')}}"><img class="md-logo" src="{{ url_for('static', filename='logo1.png') }}" alt=""></a>
+				<img src="{{ url_for('static', filename='err-img.png') }}" alt="">
+				<h1>User Not Found</h1>
+				<a href="{{url_for('homepage')}}" class="redbtn">go home</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins2.js') }}"></script>
+<script src="{{ url_for('static', filename='custom.js') }}"></script>
+</body>
+</html>
